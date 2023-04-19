@@ -1,0 +1,14 @@
+databaseChangeLog:
+  - changeSet:
+      id: s_c-data
+      author: sesh
+      runOnChange: true
+      context: dev
+      loadUpdateData:
+        primaryKey: id
+        file: data/data/student_course.csv
+        relativeToChangelogFile: true
+        quotChar: '"'
+        separator: ';'
+        encoding: UTF-8
+        tableName: STUDENT_COURSE

@@ -1,0 +1,14 @@
+databaseChangeLog:
+  - changeSet:
+      id: grade-data
+      author: sesh
+      runOnChange: true
+      context: dev
+      loadUpdateData:
+        primaryKey: id
+        file: data/data/grade.csv
+        relativeToChangelogFile: true
+        quotChar: '"'
+        separator: ';'
+        encoding: UTF-8
+        tableName: grade
