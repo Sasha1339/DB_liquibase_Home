@@ -1,0 +1,27 @@
+databaseChangeLog:
+  - changeSet:
+      id: s_c
+      author: sesh
+      createTable:
+        tableName: STUDENT_COURSE
+        columns:
+          - column:
+                name: id
+                type: bigint
+                autoIncrement: true
+                constraints:
+                  primaryKey: true
+                  nullable: false
+          - column:
+              name: student_id
+              type: bigint
+              constraints:
+                foreignKeyName: groups_id_i
+                references: student(id)
+
+          - column:
+              name: course_id
+              type: bigint
+              constraints:
+                foreignKeyName: groups_id_idd
+                references: course(id)

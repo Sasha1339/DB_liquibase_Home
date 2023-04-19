@@ -1,0 +1,16 @@
+databaseChangeLog:
+  - changeSet:
+      id: grade
+      author: sesh
+      createTable:
+        tableName: grade
+        columns:
+          - column:
+              name: id
+              type: bigint
+              constraints:
+                nullable: false
+                primaryKey: true
+          - column:
+              name: grade
+              type: int
